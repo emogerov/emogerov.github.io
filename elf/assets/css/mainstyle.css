@@ -115,7 +115,8 @@ global styles
 */
 html,
 body {
-  background: #fff;
+  background: #000;
+  color: #FFF;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -1006,7 +1007,7 @@ about
 #about .right-text-content p {
   font-size: 16px;
   line-height: 27px;
-  color: #777;
+  color: #FFF;
 }
 
 
