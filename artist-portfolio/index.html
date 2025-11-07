@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo/Name -->
+                <div class="logo">
+                    <h1>Artist Portfolio</h1>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <button onclick="scrollToSection('category-1')" class="nav-link">Категория 1</button>
+                    <button onclick="scrollToSection('category-2')" class="nav-link">Категория 2</button>
+                    <button onclick="scrollToSection('category-3')" class="nav-link">Категория 3</button>
+                    <button onclick="scrollToSection('category-4')" class="nav-link">Категория 4</button>
+                    <button onclick="scrollToSection('category-5')" class="nav-link">Категория 5</button>
+                    <button onclick="scrollToSection('about')" class="nav-link">За мен</button>
+                </nav>
+
+                <!-- Social Links -->
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a href="mailto:artist@example.com" class="social-icon" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg id="close-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu">
+                <nav class="mobile-nav">
+                    <button onclick="scrollToSection('category-1')" class="nav-link-mobile">Категория 1</button>
+                    <button onclick="scrollToSection('category-2')" class="nav-link-mobile">Категория 2</button>
+                    <button onclick="scrollToSection('category-3')" class="nav-link-mobile">Категория 3</button>
+                    <button onclick="scrollToSection('category-4')" class="nav-link-mobile">Категория 4</button>
+                    <button onclick="scrollToSection('category-5')" class="nav-link-mobile">Категория 5</button>
+                    <button onclick="scrollToSection('about')" class="nav-link-mobile">About</button>
+                    <div class="social-links-mobile">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="mailto:artist@example.com" class="social-icon" aria-label="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container text-center">
+                <h2 class="hero-title">Lorem Ipsum Dolor Sit Amet</h2>
+                <p class="hero-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                </p>
+            </div>
+        </section>
+
+        <!-- Gallery Sections -->
+        <div class="gallery-sections">
+            <!-- Category 1 Section -->
+            <section id="category-1" class="gallery-section">
+                <div class="container">
+                    <h2 class="section-title">Категория 1</h2>
+                    <div class="gallery-grid" id="category-1-grid"></div>
+                </div>
+            </section>
+
+            <!-- Category 2 Section -->
+            <section id="category-2" class="gallery-section">
+                <div class="container">
+                    <h2 class="section-title">Категория 2</h2>
+                    <div class="gallery-grid" id="category-2-grid"></div>
+                </div>
+            </section>
+
+            <!-- Category 3 Section -->
+            <section id="category-3" class="gallery-section">
+                <div class="container">
+                    <h2 class="section-title">Категория 3</h2>
+                    <div class="gallery-grid" id="category-3-grid"></div>
+                </div>
+            </section>
+
+            <!-- Category 4 Section -->
+            <section id="category-4" class="gallery-section">
+                <div class="container">
+                    <h2 class="section-title">Категория 4</h2>
+                    <div class="gallery-grid" id="category-4-grid"></div>
+                </div>
+            </section>
+
+            <!-- Category 5 Section -->
+            <section id="category-5" class="gallery-section">
+                <div class="container">
+                    <h2 class="section-title">Категория 5</h2>
+                    <div class="gallery-grid" id="category-5-grid"></div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Filtered Gallery Section -->
+        <section id="filtered-gallery" class="gallery-section filtered-gallery-section">
+            <div class="container">
+                <h2 class="section-title">Моите картини</h2>
+                
+                <!-- Filter Buttons -->
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterGallery('all')">Всички</button>
+                    <button class="filter-btn" onclick="filterGallery('Категория 1')">Категория 1</button>
+                    <button class="filter-btn" onclick="filterGallery('Категория 2')">Категория 2</button>
+                    <button class="filter-btn" onclick="filterGallery('Категория 3')">Категория 3</button>
+                    <button class="filter-btn" onclick="filterGallery('Категория 4')">Категория 4</button>
+                    <button class="filter-btn" onclick="filterGallery('Категория 5')">Категория 5</button>
+                </div>
+                
+                <!-- Filtered Gallery Grid -->
+                <div class="gallery-grid" id="filtered-grid"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container about-container">
+                <h2 class="section-title">За мен</h2>
+                <div class="about-content">
+                    <p class="about-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    <p class="about-text">
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+                        eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container text-center">
+            <p class="footer-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            </p>
+            <p class="footer-copyright">
+                Всички права запазени © <span id="current-year"></span> Artist Portfolio.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal">
+        <button class="modal-close" onclick="closeModal()" aria-label="Close modal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="modal-content-wrapper">
+            <img id="modal-image" src="" alt="" class="modal-image">
+            <div class="modal-info">
+                <h3 id="modal-title" class="modal-title"></h3>
+                <p id="modal-dimensions" class="modal-dimensions"></p>
+                <p id="modal-category" class="modal-category"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
